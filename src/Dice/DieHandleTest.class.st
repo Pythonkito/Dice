@@ -40,3 +40,15 @@ DieHandleTest >> testRoll [
 	handle addDie: (Die withFaces: 10).
 	self assert: (handle roll between: handle diceNumber and: handle maxValue )
 ]
+
+{ #category : #tests }
+DieHandleTest >> testSimpleCreation [
+
+	self assert: 2 D20 diceNumber equals: 2
+]
+
+{ #category : #tests }
+DieHandleTest >> testSumming [
+
+	self assert: (1 D4 + 2 D20) diceNumber equals:3
+]
